@@ -36,7 +36,7 @@ export function renderAPOD(data) {
       <h2>${data.title}</h2>
       <img src="${data.url}" alt="${data.title}" id="apod-img" />
       <p id="apod-description">${data.explanation}</p>
-      <button id="fav-btn">Save to Favorites</button>
+      <button id="save-apod-btn">Save to Favorites</button>
     </div>
   `;
 
