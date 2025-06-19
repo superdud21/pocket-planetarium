@@ -133,18 +133,24 @@ export function renderMoonPhase() {
 }
 
 export function renderFavorites(favs) {
-  const gallery = document.getElementById('favorites-gallery');
-  if (!gallery) return;
-
-  if (!favs.length) {
-    gallery.innerHTML = `<p>No favorites saved yet.</p>`;
+  const container = document.getElementById('favorites-gallery');
+  if (!container) {
+    console.warn("⚠️ Favorites gallery container not found.");
     return;
   }
 
-  gallery.innerHTML = favs.map(fav => `
-    <div class="gallery-item">
+  if (!favs || favs.length === 0) {
+    container.innerHTML = "<p>No favorites saved.</p>";
+    return;
+  }
+
+  container.innerHTML = favs.map(fav => `
+    <div class="gallery-item hover-card">
       <img src="${fav.url}" alt="${fav.title}" />
-      <p>${fav.title}</p>
+      <div class="hover-overlay">
+        <h4>${fav.title}</h4>
+        <p>${fav.date}</p>
+      </div>
     </div>
   `).join('');
 }

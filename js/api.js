@@ -1,4 +1,3 @@
-// js/api.js
 const API_KEY = 'yTWs2P6MjbERrJgI8hEi6htY7m90bGJ5FZofasgu';
 
 export async function fetchAPOD() {
