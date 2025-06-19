@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Stargazing app with weather, moon phase, and NASA images" />
+  <title>Pocket Planetarium</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Pocket Planetarium</h1>
+  </header>
+
+  <main>
+    <section id="apod-section" class="content-section">
+    <h2>Astronomy Picture of the Day</h2>
+    <img id="apod-img" alt="Astronomy Picture of the Day" />
+    <p id="apod-description"></p>
+    </section>
+
+    <section class="info-section">
+      <div class="info-card">
+        <h2>Moon Phase</h2>
+        <div id="moon-icon" style="font-size: 3rem;">🌑</div>
+        <p id="moon-description">Moon phase</p>
+      </div>
+      <div class="info-card" id="weather-section">
+        <h2>Weather</h2>
+      </div>
+    </section>
+
+    <section class="calendar-section">
+      <h2>June 2025</h2>
+      <div id="calendar">
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <h2>APOD Favorites</h2>
+      <div id="favorites-gallery" class="gallery">
+      </div>
+      <button class="gallery-button">Scroll →</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Pocket Planetarium</p>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
