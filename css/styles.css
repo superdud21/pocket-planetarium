@@ -19,10 +19,11 @@ header {
 
 h1, h2 {
   font-family: 'Montserrat', sans-serif;
+  color: aqua;
 }
 
 a {
-  color: #00bcd4;
+  color: #ffffff;
   text-decoration: underline;
 }
 
@@ -86,6 +87,15 @@ main > * {
 .info-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 188, 212, 0.3);
+}
+
+#apod-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 1rem 0;
+  object-fit: contain;
 }
 
 .calendar-section {

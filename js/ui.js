@@ -31,12 +31,14 @@ export function renderAPOD(data) {
     section.insertBefore(iframe, description);
   }
 
-section.innerHTML = `
-  <h2>${data.title}</h2>
-  <img src="${data.url}" alt="${data.title}" style="max-width:100%;" />
-  <p>${data.explanation}</p>
-  <button id="save-apod-btn">Save to Favorites</button>
-`;
+  section.innerHTML = `
+    <div class="info-card">
+      <h2>${data.title}</h2>
+      <img src="${data.url}" alt="${data.title}" id="apod-img" />
+      <p id="apod-description">${data.explanation}</p>
+      <button id="fav-btn">Save to Favorites</button>
+    </div>
+  `;
 
   const btn = document.getElementById('save-apod-btn');
   if (btn) {
