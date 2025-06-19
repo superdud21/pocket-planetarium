@@ -8,7 +8,7 @@ export async function fetchAPOD() {
 }
 
 export async function fetchLocation() {
-  const res = await fetch('http://ip-api.com/json/');
+  const res = await fetch('https://ip-api.com/json/');
   if (!res.ok) throw new Error("Failed to fetch location");
   const data = await res.json();
 
